@@ -5,3 +5,8 @@ a {
 .item {
     display: inline-block;
 }
+
+#menu {
+    display: flex;
+    flex-direction: column;
+}
