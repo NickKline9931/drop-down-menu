@@ -1,18 +1,17 @@
 function useMenu() {
-    let items = document.querySelectorAll('a');
+  const items = document.querySelectorAll('a');
+  const arrow = document.getElementById('arrow');
 
-  items.forEach(item => {
-    if (item.classList.contains("item")) {
-        item.classList.remove("item"); 
-    }else {
-    item.classList.add("item");
+  items.forEach((item) => {
+    if (item.classList.contains('item')) {
+      item.classList.remove('item');
+      arrow.src = 'show.svg';
+    } else {
+      item.classList.add('item');
+      arrow.src = 'hide.svg';
     }
-    
-});
-};
-;
+  });
+}
 
-
-
-let dropButton = document.getElementById("dropbutton");
-dropButton.addEventListener("click", useMenu);
+const dropButton = document.getElementById('dropbutton');
+dropButton.addEventListener('click', useMenu);
